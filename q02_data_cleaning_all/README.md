@@ -14,7 +14,7 @@
 
 | Parameter | dtype | argument type | default value | description |
 | :---: | :---: | :---: | :---: | :---: |
-| data | pandas DataFrame|  | compulsory | Data at hand for cleaning|
+| data | pandas DataFrame| compulsory |  | Data at hand for cleaning|
 
 
 #### Returns:
