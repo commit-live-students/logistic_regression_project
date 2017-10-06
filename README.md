@@ -3,6 +3,7 @@
 Welcome! This is new project and new tasks at hand. 
 
 **This is Logistic Regression Project**
+
 We are going to do task to strengthen whatever we learned in class of Logistic Regression. 
 
 # What we have learned so far:
