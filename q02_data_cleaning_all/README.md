@@ -2,7 +2,7 @@
 
 - In the previous task we have removed the outlier and now we will do rest of the cleaning.
 - In this cleaning you will perform following task:     (Hint: This is not gonna be easy!)
-    - Separate Target variable from the data, so that you will have `Independent Variables` and `Dependent Variable`.
+    - Separate variable of the data such as you will have `Independent Variables` and `Dependent Variable`.
     - Split the `Dependent Variables` and `Independent Variables` into train and test part. (Hint: X_train, y_train, remember!)
     - `Impute` the missing value of Numerical and categorical variables in train and test part of the data.
     - Perform the `SQRT transformation` on Numerical variable of train and test part of the data.
