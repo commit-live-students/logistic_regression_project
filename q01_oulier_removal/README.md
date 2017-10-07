@@ -7,7 +7,7 @@
 
 **Hint: This is applicable for only numerical values(continuous).**
 
-####### Parameters:
+###### Parameters:
 
 | Parameter | dtype | argument type | default value | description |
 | :---: | :---: | :---: | :---: | :---: |
