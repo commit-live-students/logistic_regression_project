@@ -1,10 +1,10 @@
 # Default Imports
-import sys,os
+
 import pandas as pd
 import numpy as np
-sys.path.append(os.path.join(os.path.dirname(os.curdir)))
-from q02_data_cleaning_all.build import data_cleaning
-from q01_outlier_removal.build import outlier_removal
+
+from greyatomlib.logistic_regression_project.q02_data_cleaning_all.build import data_cleaning
+from greyatomlib.logistic_regression_project.q01_outlier_removal.build import outlier_removal
 
 loan_data = pd.read_csv('data/loan_prediction_uncleaned.csv')
 loan_data = loan_data.drop('Loan_ID', 1)

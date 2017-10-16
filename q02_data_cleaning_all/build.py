@@ -1,7 +1,7 @@
 # Default Imports
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from q01_outlier_removal.build import outlier_removal
+from greyatomlib.logistic_regression_project.q01_outlier_removal.build import outlier_removal
 
 loan_data = pd.read_csv('data/loan_prediction_uncleaned.csv')
 loan_data = loan_data.drop('Loan_ID', 1)

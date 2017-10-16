@@ -1,13 +1,11 @@
 # Default Imports
-import sys, os
 import pandas as pd
 import numpy
-sys.path.append(os.path.join(os.path.dirname(os.curdir)))
 from unittest import TestCase
-from q02_data_cleaning_all.build import data_cleaning
-from q02_data_cleaning_all_2.build import data_cleaning_2
-from q01_outlier_removal.build import outlier_removal
-from q03_logistic_regression.build import logistic_regression
+from greyatomlib.logistic_regression_project.q02_data_cleaning_all.build import data_cleaning
+from greyatomlib.logistic_regression_project.q02_data_cleaning_all_2.build import data_cleaning_2
+from greyatomlib.logistic_regression_project.q01_outlier_removal.build import outlier_removal
+from ..build import logistic_regression
 from inspect import getargspec
 
 

@@ -1,11 +1,8 @@
-import sys, os
 import pandas as pd
-
-sys.path.append(os.path.join(os.path.dirname(os.curdir)))
 from unittest import TestCase
 from ..build import data_cleaning_2
-from q02_data_cleaning_all.build import data_cleaning
-from q01_outlier_removal.build import outlier_removal
+from greyatomlib.logistic_regression_project.q02_data_cleaning_all.build import data_cleaning
+from greyatomlib.logistic_regression_project.q01_outlier_removal.build import outlier_removal
 from inspect import getargspec
 
 
