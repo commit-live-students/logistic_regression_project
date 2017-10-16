@@ -1,33 +1,27 @@
 # Logistic Regression (Model Building and Fitting)
 
-* If you have reached here so that means you have tackled the most difficult task for this data, and believe me, I appreciate your efforts.
-* So, what next? Here we go...
+If you have reached here so that means you have tackled the most difficult task for this data, and believe me, I appreciate your efforts.
 
-**After you get your clean parameters, i.e. X_train, X_teest, y_train, y_test, you will build a model `Logistic Regression` on train part
-and fit that model on test part.**
+So, what next? Here we go...
 
-if this is confusing then go back to class slides and revise it once more. This is gonna be easy for you.
+## Write a function`logistic_regression` that :
 
-**CREATE A FUNCTION `logistic_regression` THAT PERFORMS THE FOLLOWING TASK:**
+- Build the logistic regression model.
+- Fit that model on the test part.
+- Gives the confusion matrix as evaluation metric of how good fit model is. 
 
-- Build the logistic regression model
-- fit that model on the test part
-- gives the confusion matrix as evaluation metric of how good fit model is. 
-
-Below is parameters are given to include in function, and expected output result is also given.
-
-#### Parameters:
+### Parameters:
 
 | Parameter | dtype | argument type | default value | description |
 | :---: | :---: | :---: | :---: | :---: |
-| X_train | Numpy arrays for training, testing; any format acceptable by sklearn| | compulsory|scaled X_train |
-| X_test | Numpy arrays for training, testing; any format acceptable by sklearn| | compulsory|scaled X_test |
-| y_train | Numpy arrays for training, testing; any format acceptable by sklearn | | compulsory| y_train |
-| y_test |  Numpy arrays for training, testing; any format acceptable by sklearn|  | compulsory| y_test |
+| X_train | Numpy arrays for training any format acceptable by sklearn| scaled X_train |
+| X_test | Numpy arrays for testing any format acceptable by sklearn| scaled X_test |
+| y_train | Numpy arrays for training any format acceptable by sklearn   | y_train |
+| y_test |  Numpy arrays for testing any format acceptable by sklearn   | y_test |
 
 
-#### Returns:
+### Returns:
 
 | Parameter | dtype  | description |
 | :---: | :---: |:---: |
-| cm | array of matrix | accuracy of created model |
+| cm | array of matrix | Confusion matrix to evaluate your model |
