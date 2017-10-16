@@ -4,7 +4,7 @@ In the previous task we have removed the outlier and now we will do rest of the 
 
 ## Write a function `data_cleaning` that :
 - Split the `Dependent Variables` and `Independent Variable` into train and test part. (Hint: X_train, y_train, remember!)
--`Impute` the missing value of Numerical and categorical variables in train and test part of the data.
+- `Impute` the missing value of Numerical and categorical variables in train and test part of the data.
  
 ### Parameters:
 
