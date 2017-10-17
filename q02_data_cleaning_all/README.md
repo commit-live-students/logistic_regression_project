@@ -25,7 +25,7 @@ In the previous task we have removed the outlier and now we will do rest of the 
 | y_test |  Numpy arrays for testing any format acceptable by sklearn   | y_test |
 
 Hint : 
-- Set random state as 9 while splitting the data set.
+- Set random seed as 9 before splitting the data and random state as 9 while splitting the data set.
 - Numerical variable (`LoanAmount`) imputation can be performed with mean imputation.
 - Categorical variables null values should be imputed with mode imputation.
 

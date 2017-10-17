@@ -9,4 +9,3 @@ loan_data = loan_data.drop('Loan_ID', 1)
 
 
 
-

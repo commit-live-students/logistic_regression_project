@@ -40,10 +40,10 @@ class TestData_cleaning_2(TestCase):
         test_val = X_test['Property_Area_Urban'].value_counts()
         test_val1 = X_test['Dependents_1'].value_counts()
 
-        self.assertEqual(list(train_val), [350, 62], "Return value counts does not match expected value counts")
-        self.assertEqual(list(train_val1), [272, 140], "Return value counts does not match expected value counts")
-        self.assertEqual(list(test_val), [96, 42], "Return value counts does not match expected value counts")
-        self.assertEqual(list(test_val1), [112, 26], "Return value counts does not match expected value counts")
+        self.assertEqual(list(train_val), [343, 69], "Return value counts does not match expected value counts")
+        self.assertEqual(list(train_val1), [278, 134], "Return value counts does not match expected value counts")
+        self.assertEqual(list(test_val), [90, 48], "Return value counts does not match expected value counts")
+        self.assertEqual(list(test_val1), [119, 19], "Return value counts does not match expected value counts")
 
         self.assertEqual(X_train.shape, (412, 14), "Return value shape does not match expected value")
         self.assertEqual(X_test.shape, (138, 14), "Return value shape does not match expected value")

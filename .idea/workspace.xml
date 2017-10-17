@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4e6e4ef5-6658-49a9-9a81-b840970bc282" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q01_outlier_removal/build.py" afterPath="$PROJECT_DIR$/q01_outlier_removal/build.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q02_data_cleaning_all/README.md" afterPath="$PROJECT_DIR$/q02_data_cleaning_all/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q02_data_cleaning_all/build.py" afterPath="$PROJECT_DIR$/q02_data_cleaning_all/build.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q02_data_cleaning_all/tests/test_q02_data_cleaning.py" afterPath="$PROJECT_DIR$/q02_data_cleaning_all/tests/test_q02_data_cleaning.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q02_data_cleaning_all_2/Tests/q02_test_data_cleaning_2.py" afterPath="$PROJECT_DIR$/q02_data_cleaning_all_2/Tests/q02_test_data_cleaning_2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q02_data_cleaning_all_2/build.py" afterPath="$PROJECT_DIR$/q02_data_cleaning_all_2/build.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q03_logistic_regression/build.py" afterPath="$PROJECT_DIR$/q03_logistic_regression/build.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/q03_logistic_regression/tests/test_q03_logistic_regression.py" afterPath="$PROJECT_DIR$/q03_logistic_regression/tests/test_q03_logistic_regression.py" />
     </list>
@@ -19,7 +19,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="build.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/q01_outlier_removal/build.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/q02_data_cleaning_all/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="459">
+                <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,14 +87,14 @@
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/q02_data_cleaning_all_2/README.md" />
         <option value="$PROJECT_DIR$/q03_logistic_regression/README.md" />
-        <option value="$PROJECT_DIR$/q01_outlier_removal/build.py" />
-        <option value="$PROJECT_DIR$/q02_data_cleaning_all/README.md" />
-        <option value="$PROJECT_DIR$/q02_data_cleaning_all_2/build.py" />
         <option value="$PROJECT_DIR$/q02_data_cleaning_all/tests/test_q02_data_cleaning.py" />
-        <option value="$PROJECT_DIR$/q02_data_cleaning_all/build.py" />
         <option value="$PROJECT_DIR$/q02_data_cleaning_all_2/Tests/q02_test_data_cleaning_2.py" />
-        <option value="$PROJECT_DIR$/q03_logistic_regression/build.py" />
         <option value="$PROJECT_DIR$/q03_logistic_regression/tests/test_q03_logistic_regression.py" />
+        <option value="$PROJECT_DIR$/q03_logistic_regression/build.py" />
+        <option value="$PROJECT_DIR$/q01_outlier_removal/build.py" />
+        <option value="$PROJECT_DIR$/q02_data_cleaning_all/build.py" />
+        <option value="$PROJECT_DIR$/q02_data_cleaning_all_2/build.py" />
+        <option value="$PROJECT_DIR$/q02_data_cleaning_all/README.md" />
       </list>
     </option>
   </component>
@@ -102,7 +126,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,14 +133,31 @@
               <item name="logistic_regression_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="logistic_regression_project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="logistic_regression_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistic_regression_project" type="462c0819:PsiDirectoryNode" />
+              <item name="q02_data_cleaning_all" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistic_regression_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistic_regression_project" type="462c0819:PsiDirectoryNode" />
+              <item name="q03_logistic_regression" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistic_regression_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistic_regression_project" type="462c0819:PsiDirectoryNode" />
+              <item name="q03_logistic_regression" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/q02_data_cleaning_all_2/Tests" />
+    <property name="last_opened_file_path" value="F:/logistic_regression_project" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -148,6 +188,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -157,7 +198,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33487654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26096824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -278,16 +319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q01_outlier_removal/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="37">
-            <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/q03_logistic_regression/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -308,38 +339,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q02_data_cleaning_all/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/q01_outlier_removal/tests/test_q01_outlier_removal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#18#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q01_outlier_removal/build.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/q02_data_cleaning_all/tests/test_q02_data_cleaning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="17">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#18#37#0" expanded="true" />
@@ -349,8 +361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/q02_data_cleaning_all/build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#18#37#0" expanded="true" />
           </folding>
@@ -359,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/q02_data_cleaning_all_2/Tests/q02_test_data_cleaning_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -369,31 +381,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/q02_data_cleaning_all_2/build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#19#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q03_logistic_regression/build.py">
+    <entry file="file://$PROJECT_DIR$/q03_logistic_regression/tests/test_q03_logistic_regression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="527">
+          <caret line="31" column="37" lean-forward="false" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
           <folding>
             <element signature="e#18#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/q03_logistic_regression/tests/test_q03_logistic_regression.py">
+    <entry file="file://$PROJECT_DIR$/q03_logistic_regression/build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#18#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/q01_outlier_removal/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/q01_outlier_removal/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/q02_data_cleaning_all/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="459">
+            <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
