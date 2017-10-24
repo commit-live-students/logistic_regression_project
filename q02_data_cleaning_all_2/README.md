@@ -27,5 +27,6 @@ In the previous task we have splitted our dataframe into train and test and also
 | y_test |  Numpy arrays for testing any format acceptable by sklearn   | y_test |
 
 
+Hint: Perform the label encoding on categorical variables (`Gender`, `Married`, `Dependents`, `Education`, `Self_Employed`, `Property_Area`) using `pd.get_dummies` function.
 
 Let's get started !
