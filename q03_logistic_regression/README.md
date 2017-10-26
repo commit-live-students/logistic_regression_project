@@ -6,7 +6,7 @@ So, what next? Here we go...
 
 ## Write a function`logistic_regression` that :
 
-- Build the logistic regression model.
+- Build the logistic regression model with random_state=9.
 - Fit that model on the test part.
 - Gives the confusion matrix as evaluation metric of how good fit model is. 
 
