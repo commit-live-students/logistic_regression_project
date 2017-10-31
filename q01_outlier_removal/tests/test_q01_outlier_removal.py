@@ -22,4 +22,4 @@ class TestOutlier_removal(TestCase):
                                   type(data)))
 
         # Return value tests
-        self.assertEqual(data.shape, (550, 12), "Return value shape does not match expected value")
+        self.assertEqual(data.shape, (545, 12), "Return value shape does not match expected value")
