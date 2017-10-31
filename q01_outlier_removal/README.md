@@ -8,7 +8,7 @@ Before we proceed with making logistic regression you have been given the data, 
 Hint: 
 - This is applicable for only numerical values(continuous).
 - This data contains `ApplicantIncome`, `CoapplicantIncome`, `LoanAmount` as numerical features.
-- Keep the quantile value as 0.95.
+- Keep the quantile value as 0.95 and remove those data points which are more than 0.95 quantile..
 
 ### Parameters:
 
