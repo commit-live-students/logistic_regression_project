@@ -13,5 +13,20 @@ loan_data = outlier_removal(loan_data)
 X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_test)
 
+def logistic_regression(X_train,X_test,y_train,y_test) :
+
+    logistic_regressor = LogisticRegression()
+    pipeline = Pipeline(steps=[('add_poly_features', PolynomialFeatures()),
+                           ('logistic_regression', logistic_regressor)])
+    pipeline.fit(X_train, y_train)
+    y_pred = pipeline.predict(X_test)
+    print accuracy_score(y_test, y_pred)
+    cnf = confusion_matrix(y_test,y_pred)
+
+    return cnf
+
+logistic_regression(X_train,X_test,y_train,y_test)
+# Write your solution code here:
+
 
 # Write your solution code here:
