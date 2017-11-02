@@ -28,8 +28,8 @@ def data_cleaning(loan_data):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=9)
 
-    #Return_val = X_train.isnull().values.any()
-    #Return_val1 = X_test.isnull().values.any()
+   # print(X_train.isnull().values.any())
+    #print(X_test.isnull().values.any())
 
     #print(X)
     return  X, y, X_train, X_test, y_train, y_test
