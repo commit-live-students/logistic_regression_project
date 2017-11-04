@@ -16,11 +16,11 @@ def data_cleaning (data):
     imp_mode = Imputer(missing_values = 'NaN', strategy='most_frequent')
     data['LoanAmount'] = imp_mean.fit_transform(data[['LoanAmount']])
     data['Gender'] = data['Gender'].fillna(data['Gender'].mode()[0])
-    data['Married'] = data['Gender'].fillna(data['Married'].mode()[0])
-    data['Dependents'] = data['Gender'].fillna(data['Dependents'].mode()[0])
-    data['Self_Employed'] = data['Gender'].fillna(data['Self_Employed'].mode()[0])
-    data['Loan_Amount_Term'] = data['Gender'].fillna(data['Loan_Amount_Term'].mode()[0])
-    data['Credit_History'] = data['Gender'].fillna(data['Credit_History'].mode()[0])
+    data['Married'] = data['Married'].fillna(data['Married'].mode()[0])
+    data['Dependents'] = data['Dependents'].fillna(data['Dependents'].mode()[0])
+    data['Self_Employed'] = data['Self_Employed'].fillna(data['Self_Employed'].mode()[0])
+    data['Loan_Amount_Term'] = data['Loan_Amount_Term'].fillna(data['Loan_Amount_Term'].mode()[0])
+    data['Credit_History'] = data['Credit_History'].fillna(data['Credit_History'].mode()[0])
     X=data.iloc[:,:-1]
     y=data.iloc[:,-1]
     X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.25, random_state=9)
