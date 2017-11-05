@@ -12,5 +12,15 @@ loan_data = outlier_removal(loan_data)
 X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
 
-# Write your solution here :
+def data_cleaning_2(X_train,X_test,y_train,y_test):
 
+    df_trans['GrLivArea'] = np.sqrt(df_trans['GrLivArea'])
+
+    X_train = pd.get_dummies(X_train, drop_first = True )
+    X_test =  pd.get_dummies( X_test, drop_first = True )
+
+
+    return X_train,X_test
+data_cleaning_2(X_train,X_test,y_train,y_test)
+
+# Write your solution here :
