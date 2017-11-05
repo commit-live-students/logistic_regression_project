@@ -15,17 +15,15 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 def logistic_regression(X_train,X_test,y_train,y_test) :
 
-    logistic_regressor = LogisticRegression()
-    pipeline = Pipeline(steps=[('add_poly_features', PolynomialFeatures()),
-                           ('logistic_regression', logistic_regressor)])
-    pipeline.fit(X_train, y_train)
-    y_pred = pipeline.predict(X_test)
-    print accuracy_score(y_test, y_pred)
+    scaler = StandardScaler()
+    clf = LogisticRegression(random_state=9)
+    ss = StandardScaler()
+    X_train = ss.fit_transform(X_train)
+    X_test = ss.transform(X_test)
+    clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
     cnf = confusion_matrix(y_test,y_pred)
-
     return cnf
-
-logistic_regression(X_train,X_test,y_train,y_test)
 # Write your solution code here:
 
 
