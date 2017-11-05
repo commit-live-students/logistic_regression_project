@@ -22,4 +22,5 @@ def logistic_regression (X_train, X_test, y_train, y_test):
     y_pred = lr.predict(X_test)
     cm = confusion_matrix(y_test,y_pred)
     return cm
+
 # Write your solution code here:
