@@ -29,4 +29,4 @@ class TestLogistic_regression(TestCase):
                                   type(cm)))
 
         # Return value tests
-        self.assertEqual(cm.max(), 89, "Expected return value does not given return value")
+        self.assertEqual(cm.max(), 94, "Expected return value does not given return value")
