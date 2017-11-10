@@ -11,6 +11,4 @@ loan_data = loan_data.drop('Loan_ID', 1)
 loan_data = outlier_removal(loan_data)
 X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
-
 # Write your solution here :
-
