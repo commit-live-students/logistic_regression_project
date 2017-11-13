@@ -22,9 +22,10 @@ def data_cleaning_2(X_train,X_test,y_train,y_test):
         df_train[col]=np.sqrt(df_train[col])
     for col in df_test:
         df_test[col]=np.sqrt(df_test[col])
-    df_train_cat=X_train[['Dependencies', 'Self_Employes', 'Property_Area']]
+    df_train_cat=X_train[['Dependents', 'Self_Employed', 'Property_Area']]
     df_train_cat=pd.get_dummies(df_train_cat)
     df_test_cat=X_test[['Dependents', 'Self_Employed', 'Property_Area']]
+    df_test_cat=pd.get_dummies(df_test_cat)
     result_x_train=pd.concat([df_train, df_train_cat], axis=1)
     result_x_test=pd.concat([df_test, df_test_cat], axis=1)
     return result_x_train, result_x_test, y_train, y_test
