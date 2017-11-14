@@ -7,5 +7,9 @@ loan_data = loan_data.drop('Loan_ID', 1)
 
 # Write your Solution here:
 
+def outlier_removal(loan_data):
+    loan_data =loan_data.drop(loan_data[(loan_data['ApplicantIncome']>14583)
+         | (loan_data['CoapplicantIncome']>4997.4)
+         | (loan_data['LoanAmount']>297.8)].index)
 
-
+    return loan_data
