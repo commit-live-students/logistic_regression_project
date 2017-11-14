@@ -14,8 +14,8 @@ X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
 def data_cleaning_2(X_train,X_test,y_train,y_test):
 
-    X_train_num = X_train.select_dtypes(include=['float64'])
-    X_test_num = X_test.select_dtypes(include=['float64'])
+    X_train_num = X_train.select_dtypes(include=['int16', 'int32', 'int64', 'float16', 'float32', 'float64'])
+    X_test_num = X_test.select_dtypes(include=['int16', 'int32', 'int64', 'float16', 'float32', 'float64'])
 
     for col in X_train_num:
         X_train_num[col] = np.sqrt(X_train_num[col])
@@ -30,6 +30,7 @@ def data_cleaning_2(X_train,X_test,y_train,y_test):
     X_test2 = pd.concat([X_test_num,X_test_cat],axis=1)
 
     return X_train2,X_test2,y_train,y_test
+
 
 
 
