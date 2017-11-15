@@ -10,7 +10,3 @@ loan_data = outlier_removal(loan_data)
 
 
 # Write your solution here :
-
-
-
-
