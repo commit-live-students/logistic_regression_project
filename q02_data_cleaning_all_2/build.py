@@ -13,4 +13,16 @@ X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
 
 # Write your solution here :
+def convertDummies(X):
+    df_new = pd.DataFrame()
+    X = X.copy()
+    df_categoric = X.select_dtypes(include=['object'])
 
+    df_categoric = pd.get_dummies(df_categoric)
+
+    return df_categoric
+
+def data_cleaning_2(X_train, X_test, y_train, y_test):
+    X_train = convertDummies(X_train)
+    X_test = convertDummies(X_test)
+    return X_train, X_test, y_train, y_test
