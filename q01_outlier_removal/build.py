@@ -6,6 +6,9 @@ loan_data = loan_data.drop('Loan_ID', 1)
 
 
 # Write your Solution here:
-
-
-
+def outlier_removal(loan_data):
+    num_cols = loan_data[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']]
+    quant = num_cols.quantile(0.95)
+    for col in num_cols:
+        loan_data = loan_data.drop(loan_data[loan_data[col]>quant[col]].index)
+    return loan_data
