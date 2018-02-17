@@ -39,4 +39,4 @@ def data_cleaning(data):
 
 
 
-#print data_cleaning (loan_data)
+print data_cleaning (loan_data)
