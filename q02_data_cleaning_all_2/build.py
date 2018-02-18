@@ -11,3 +11,19 @@ X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
 
 # Write your solution here :
+def data_cleaning_2(X_train, X_test, y_train, y_test):
+    num_col = X_train.select_dtypes(include=['int','float'])
+    for col in num_col.columns.values:
+        X_train.loc[:,col] = np.sqrt(X_train[col])
+        X_test.loc[:,col] = np.sqrt(X_test[col])
+
+    cols = ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']
+    X_train = pd.get_dummies(X_train, columns=cols, drop_first=True)
+    X_test = pd.get_dummies(X_test, columns=cols, drop_first=True)
+
+    #X_train.drop(cols, axis=1, inplace=True)
+    #X_test.drop(cols, axis=1, inplace=True)
+
+
+
+    return X_train, X_test, y_train, y_test
