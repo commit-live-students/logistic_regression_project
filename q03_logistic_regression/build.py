@@ -14,4 +14,16 @@ X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_test)
 
 
-# Write your solution code here:
+def logistic_regression(X_train, X_test, y_train, y_test):
+    stand_scale= StandardScaler()
+    column_transform = ['ApplicantIncome','CoapplicantIncome','LoanAmount']
+    for a in column_transform:
+        X_test.loc[:, column_transform] = stand_scale.fit_transform(X_test.loc[:, column_transform])
+        X_train.loc[:, column_transform] = stand_scale.fit_transform(X_train.loc[:, column_transform])
+
+    logistic_regressor = LogisticRegression(random_state=9)
+    logistic_regressor.fit(X_train, y_train)
+    y_pred = logistic_regressor.predict(X_test)
+
+    cm = confusion_matrix(y_test,y_pred)
+    return cm
