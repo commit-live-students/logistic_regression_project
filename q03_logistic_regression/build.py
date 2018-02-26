@@ -12,6 +12,12 @@ loan_data = loan_data.drop('Loan_ID', 1)
 loan_data = outlier_removal(loan_data)
 X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_test)
+def logistic_regression(X_train, X_test, y_train, y_test):
 
+    lr = LogisticRegression(random_state = 9)
+    lr.fit(X_train,y_train)
+    y_pred = lr.predict(X_test)
+    cm = confusion_matrix(y_test, y_pred)
+    return cm
 
 # Write your solution code here:
