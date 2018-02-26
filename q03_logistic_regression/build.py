@@ -1,3 +1,4 @@
+# %load q03_logistic_regression/build.py
 # Default Imports
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -13,5 +14,15 @@ loan_data = outlier_removal(loan_data)
 X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_test)
 
+def logistic_regression(X_train, X_test, y_train, y_test):
+    std_scale = StandardScaler(with_mean=True, with_std=True).fit(X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
+    X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']] = std_scale.transform(X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
+    X_test[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']] = std_scale.transform(X_test[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
 
-# Write your solution code here:
+    clf = LogisticRegression(random_state=9)
+    clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
+    #print y_pred
+    return confusion_matrix(y_test,y_pred)
+
+logistic_regression(X_train, X_test, y_train, y_test)
