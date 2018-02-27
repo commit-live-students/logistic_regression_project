@@ -15,3 +15,13 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 
 # Write your solution code here:
+# Write your solution code here:
+def logistic_regression(X_train,X_test,y_train,y_test):
+    scaler=StandardScaler()
+    lr = LogisticRegression()
+    scaler.fit_transform(X_train)
+    scaler.fit_transform(X_test)
+    lr.fit(X_train,y_train)
+    y_pred=lr.predict(X_test)
+    cm=confusion_matrix(y_test,y_pred)
+    return cm
