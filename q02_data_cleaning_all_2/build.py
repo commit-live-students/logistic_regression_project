@@ -11,3 +11,8 @@ X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
 
 # Write your solution here :
+def data_cleaning_2(X_train,X_test,y_train,y_test):
+    cols=X_train.select_dtypes(include=['object']).columns.tolist()
+    X_train=pd.get_dummies(X_train,columns=cols,drop_first=True)
+    X_test=pd.get_dummies(X_test,columns=cols,drop_first=True)
+    return X_train,X_test,y_train,y_test
