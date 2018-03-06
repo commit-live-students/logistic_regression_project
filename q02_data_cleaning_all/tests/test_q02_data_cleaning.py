@@ -3,7 +3,7 @@ import pandas as pd
 from unittest import TestCase
 from greyatomlib.logistic_regression_project.q01_outlier_removal.build import outlier_removal
 from ..build import data_cleaning
-from inspect import getargspec
+from inspect import getfullargspec
 loan_data = pd.read_csv('data/loan_prediction_uncleaned.csv')
 loan_data = loan_data.drop('Loan_ID', 1)
 loan_data = outlier_removal(loan_data)
@@ -14,10 +14,10 @@ class TestData_cleaning(TestCase):
     def test_data_cleaning_arguments(self):
 
         # Input parameters tests
-        args = getargspec(data_cleaning)
+        args = getfullargspec(data_cleaning)
         self.assertEqual(len(args[0]), 1, "Expected arguments %d, Given %d" % (1, len(args[0])))
     def test_data_cleaning_defaults(self):
-        args=getargspec(data_cleaning)
+        args=getfullargspec(data_cleaning)
         self.assertEqual(args[3], None, "Expected default values do not match given default values")
 
         
