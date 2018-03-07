@@ -49,8 +49,4 @@ class TestData_cleaning(TestCase):
                                   type(y_test)))
 
         # Return value tests
-       
-    def test_data_cleaning_return_values_null(self):
-        self.assertEqual(Return_val, False, "Return value contains NaN values")
-    def test_data_cleaning_return_values_null_1(self):
-        self.assertEqual(Return_val1, False, "Return value contains NaN values")
+      
