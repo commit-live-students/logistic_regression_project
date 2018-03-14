@@ -47,11 +47,3 @@ class TestData_cleaning(TestCase):
         self.assertIsInstance(y_test, pd.core.series.Series,
                               "Expected data type for return value is `pandas DataFrame`, you are returning %s" % (
                                   type(y_test)))
-
-        # Return value tests
-<<<<<<< HEAD
-      
-=======
-       
-   
->>>>>>> 865d1f099603f0fade998d631c8ebf361c00f20f
