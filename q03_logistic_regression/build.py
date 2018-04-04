@@ -1,3 +1,4 @@
+
 # Default Imports
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -15,3 +16,24 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 
 # Write your solution code here:
+def logistic_regression(X_train, X_test, y_train, y_test):
+    # Feature Scaling
+    sc = StandardScaler()
+    X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']] = sc.fit_transform(
+        X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
+    X_test[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']] = sc.transform(
+        X_test[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
+
+    # Fitting Logistic Regression to the Training set
+
+    classifier = LogisticRegression(random_state=9)
+    classifier.fit(X_train, y_train)
+
+    # Predicting the Test set results
+    y_pred = classifier.predict(X_test)
+
+    # Making the Confusion Matrix
+
+    cm = confusion_matrix(y_test, y_pred)
+    return cm
+
