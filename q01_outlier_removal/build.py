@@ -1,4 +1,3 @@
-# %load q01_outlier_removal/build.py
 # Default imports
 import pandas as pd
 
@@ -13,4 +12,3 @@ def outlier_removal(loan_data):
     for col in num_cols:
         loan_data = loan_data.drop(loan_data[loan_data[col]>quant[col]].index)
     return loan_data
-
