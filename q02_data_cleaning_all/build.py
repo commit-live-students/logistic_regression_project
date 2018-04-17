@@ -28,6 +28,3 @@ def data_cleaning(data):
         X_test.loc[X_test[val].isnull(), val] = temp
 
     return X, y, X_train, X_test, y_train, y_test
-
-
-
