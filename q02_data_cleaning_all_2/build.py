@@ -11,3 +11,15 @@ X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
 
 # Write your solution here :
+def data_cleaning_2(X_train, X_test, y_train, y_test):
+    numeric_columns = ['ApplicantIncome','CoapplicantIncome','LoanAmount','Loan_Amount_Term','Credit_History']
+    cat_columns = ['Gender','Married','Dependents','Education','Self_Employed','Property_Area']
+    # numeric columns
+    for val in numeric_columns:
+        X_train[val] = X_train[val].apply(np.sqrt)
+        X_test[val] = X_test[val].apply(np.sqrt)
+    # Categorical columns, using drop_first to remove one additional column
+    # keeping k-1 column and kth column becomes redundant in case of categorical variables
+    X_train = pd.get_dummies(X_train, columns=cat_columns, drop_first=True)
+    X_test = pd.get_dummies(X_test, columns=cat_columns, drop_first=True)
+    return X_train, X_test, y_train, y_test
