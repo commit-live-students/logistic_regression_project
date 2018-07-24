@@ -21,11 +21,13 @@ def data_cleaning_2(X_train, X_test, y_train, y_test):
         X_test[col] = np.sqrt(X_test[col])
 
     for col in cat_columns:
-        dummies = pd.get_dummies(X_train[col],prefix=col)
+        dummies = pd.get_dummies(X_train[col],prefix=col,drop_first=True)
         X_train = pd.concat([X_train,dummies],axis=1)
-        dummies1 = pd.get_dummies(X_test[col],prefix=col)
-        X_test = pd.concat([X_test,dummies1],axis=1)
+        X_train.drop(col, axis=1, inplace=True)
         
-    return X_train, X_test, y_train, y_test
+        dummies1 = pd.get_dummies(X_test[col],prefix=col,drop_first=True)
+        X_test = pd.concat([X_test,dummies1],axis=1)
+        X_test.drop(col, axis=1, inplace=True)
 
+    return X_train, X_test, y_train, y_test
 
