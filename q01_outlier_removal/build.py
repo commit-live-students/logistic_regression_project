@@ -8,6 +8,11 @@ loan_data = loan_data.drop('Loan_ID', 1)
 
 # Write your Solution here:
 def outlier_removal(loan_data):
-    loan_data = loan_data[(loan_data.LoanAmount <= loan_data.LoanAmount.quantile(0.962)) & (loan_data.LoanAmount >= loan_data.LoanAmount.quantile(0.04))]
+    app_inc = loan_data[['ApplicantIncome']].quantile(0.95)  
+    coap_inc = loan_data[['CoapplicantIncome']].quantile(0.95)  
+    loan_amt = loan_data[['LoanAmount']].quantile(0.95) 
+    loan_data = loan_data.drop(loan_data[(loan_data['ApplicantIncome'] > app_inc[0])].index)
+    loan_data = loan_data.drop(loan_data[(loan_data['CoapplicantIncome'] > coap_inc[0])].index)
+    loan_data = loan_data.drop(loan_data[(loan_data['LoanAmount'] > loan_amt[0])].index)
     return loan_data
 
