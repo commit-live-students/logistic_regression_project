@@ -17,18 +17,13 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 # Write your solution code here:
 def logistic_regression(X_train, X_test, y_train, y_test):
-    stand_scale= StandardScaler()
-    num_cols = ['ApplicantIncome','CoapplicantIncome', 'LoanAmount']
-    for col in num_cols:
-        X_train.loc[:, col] = stand_scale.fit_transform(X_train.loc[:, col])
-        X_test.loc[:, col] = stand_scale.fit_transform(X_test.loc[:, col])
-        y_train.loc[:, col] = stand_scale.fit_transform(y_train.loc[:, col])
-        y_test.loc[:, col] = stand_scale.fit_transform(y_test.loc[:, col])
-        
+    std_scale = StandardScaler()
+    X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']] = std_scale.fit_transform(X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
+    X_test[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']] = std_scale.transform(X_test[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
     lr = LogisticRegression(random_state=9)
-    lr.fit(X_train,y_train)
+    lr.fit(X_train, y_train)
     y_pred = lr.predict(X_test)
-    cm = confusion_matrix(y_test,y_pred)
+    cm = confusion_matrix(y_test, y_pred)
     return cm
 
 
