@@ -1,5 +1,7 @@
+# %load q03_logistic_regression/build.py
 # Default Imports
 import pandas as pd
+import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
@@ -15,4 +17,15 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 
 # Write your solution code here:
+def logistic_regression(X_train,X_test,y_train,y_test):
+    classifier = LogisticRegression()
+    np.random.seed(9)
+    scaler = StandardScaler()
+    scaler.fit_transform(X_train,X_test)
+    classifier.fit(X_train,y_train)
+    y_pred = classifier.predict(X_test)
+    cm = confusion_matrix(y_test,y_pred)
+    return cm
+logistic_regression(X_train,X_test,y_train,y_test)
+
 
