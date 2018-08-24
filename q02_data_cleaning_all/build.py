@@ -1,3 +1,4 @@
+# %load q02_data_cleaning_all/build.py
 # Default Imports
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname('__file__'))))
@@ -12,3 +13,18 @@ loan_data = outlier_removal(loan_data)
 
 
 # Write your solution here :
+def data_cleaning(data):
+    X  = loan_data.iloc[:,:-1]
+    y = loan_data.iloc[:,11]
+    
+    #splitting the data set into test and train
+    X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.25, random_state = 9)
+    
+    X_train[['LoanAmount']] = X_train[['LoanAmount']].fillna(X_train.mean(), inplace = True)
+    X_test[['LoanAmount']] = X_test[['LoanAmount']].fillna(X_test.mean(), inplace = True)
+    
+    X_train[['Gender', 'Married', 'Dependents', 'Self_Employed','Loan_Amount_Term','Credit_History']] = X_train[['Gender', 'Married', 'Dependents', 'Self_Employed','Loan_Amount_Term','Credit_History']] .apply(lambda x:x.fillna(x.value_counts().index[0]))
+    X_test[['Gender', 'Married', 'Dependents', 'Self_Employed','Loan_Amount_Term','Credit_History']] = X_test[['Gender', 'Married', 'Dependents', 'Self_Employed','Loan_Amount_Term','Credit_History']] .apply(lambda x:x.fillna(x.value_counts().index[0]))
+    
+    return X,y, X_train, X_test, y_train, y_test
+
