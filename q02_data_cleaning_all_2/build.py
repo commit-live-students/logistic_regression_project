@@ -1,3 +1,4 @@
+# %load q02_data_cleaning_all_2/build.py
 # Default Imports
 import pandas as pd
 import numpy as np
@@ -11,3 +12,14 @@ X, y, X_train, X_test, y_train, y_test = data_cleaning(loan_data)
 
 
 # Write your solution here :
+def data_cleaning_2(X_train,X_test,y_train,y_test):
+    X_train = pd.get_dummies(X_train)
+    X_train = np.sqrt(X_train)
+    X_test = pd.get_dummies(X_test)
+    X_test = np.sqrt(X_test)
+    X_train = X_train.drop(['Gender_Female','Married_No','Dependents_0','Education_Graduate','Self_Employed_No','Property_Area_Rural'],axis=1)
+    X_test = X_test.drop(['Gender_Female','Married_No','Dependents_0','Education_Graduate','Self_Employed_No','Property_Area_Rural'],axis=1)
+    return X_train,X_test,y_train,y_test
+data_cleaning_2(X_train,X_test,y_train,y_test)
+
+
