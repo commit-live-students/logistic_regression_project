@@ -1,11 +1,15 @@
+# %load q03_logistic_regression/build.py
 # Default Imports
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 from greyatomlib.logistic_regression_project.q01_outlier_removal.build import outlier_removal
 from greyatomlib.logistic_regression_project.q02_data_cleaning_all.build import data_cleaning
 from greyatomlib.logistic_regression_project.q02_data_cleaning_all_2.build import data_cleaning_2
+
+
 
 loan_data = pd.read_csv('data/loan_prediction_uncleaned.csv')
 loan_data = loan_data.drop('Loan_ID', 1)
@@ -15,4 +19,35 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 
 # Write your solution code here:
+def logistic_regression(X_train, X_test, y_train, y_test):
+    std_scl = StandardScaler()
+    scale_df = std_scl.fit_transform(X=X_train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
+    scale_df = pd.DataFrame(scale_df,columns=['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount'] , index=X_train.index)
+
+    X_train['ApplicantIncome'] = scale_df['ApplicantIncome']
+    X_train['CoapplicantIncome'] = scale_df['CoapplicantIncome']
+    X_train['LoanAmount'] = scale_df['LoanAmount']
+
+    std_scl2 = StandardScaler()
+    scale_df2 = std_scl2.fit_transform(X=X_test[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']])
+    scale_df2 = pd.DataFrame(scale_df2,columns=['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount'] , index=X_test.index)
+
+    X_test['ApplicantIncome'] = scale_df2['ApplicantIncome']
+    X_test['CoapplicantIncome'] = scale_df2['CoapplicantIncome']
+    X_test['LoanAmount'] = scale_df2['LoanAmount']
+
+    model = LogisticRegression(random_state=9)
+    model.fit(X_train,y_train)
+
+    y_pred = model.predict(X_test)
+
+    cm = confusion_matrix(y_test,y_pred)
+    return cm
+
+
+
+
+
+
+
 
