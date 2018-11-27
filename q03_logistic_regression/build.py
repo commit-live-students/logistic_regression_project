@@ -1,7 +1,9 @@
+# %load q03_logistic_regression/build.py
 # Default Imports
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
 from sklearn.metrics import confusion_matrix
 from greyatomlib.logistic_regression_project.q01_outlier_removal.build import outlier_removal
 from greyatomlib.logistic_regression_project.q02_data_cleaning_all.build import data_cleaning
@@ -15,4 +17,15 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 
 # Write your solution code here:
+def logistic_regression(X_train,X_test,y_train,y_test):
+    logistic_regressor = LogisticRegression(random_state=9)
+    scaler = StandardScaler()
+    pipeline = Pipeline(steps=[('scaler', scaler),
+                           ('logistic_regression', logistic_regressor)])
+    pipeline.fit(X_test, y_test)
+    y_pred = pipeline.predict(X_test)
+    cm=confusion_matrix(y_test,y_pred)
+    return cm
+
+
 
