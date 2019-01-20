@@ -1,3 +1,4 @@
+# %load q03_logistic_regression/build.py
 # Default Imports
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -15,4 +16,22 @@ X_train, X_test, y_train, y_test = data_cleaning_2(X_train, X_test, y_train, y_t
 
 
 # Write your solution code here:
+def logistic_regression(X_train, X_test, y_train, y_test):
+    
+    columns_to_scale = ['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount']
+    
+    for column in columns_to_scale:
+        standard_scaler = StandardScaler()
+        X_train[column] = standard_scaler.fit_transform(X_train[[column]])
+        X_test[column] = standard_scaler.fit_transform(X_test[[column]])
+    
+    model = LogisticRegression(random_state=9)
+
+    model.fit(X_train, y_train)
+    
+    y_pred = model.predict(X_test)
+    
+    return confusion_matrix(y_test, y_pred)
+
+
 
