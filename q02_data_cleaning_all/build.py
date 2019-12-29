@@ -1,3 +1,4 @@
+# %load q02_data_cleaning_all/build.py
 # Default Imports
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname('__file__'))))
@@ -12,3 +13,22 @@ loan_data = outlier_removal(loan_data)
 
 
 # Write your solution here :
+def data_cleaning(data):
+    np.random.seed(9)
+    data['LoanAmount'] = data['LoanAmount'].fillna(data['LoanAmount'].mean())
+    cat_cols = ['Gender', 'Married', 'Dependents', 'Self_Employed', 
+                'Loan_Amount_Term', 'Credit_History']
+    
+    for col in cat_cols:
+        data[col] = data[col].fillna(data[col].mode())
+    
+    X = data.drop('Loan_Status',1)
+    y = data['Loan_Status']
+    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.25, random_state=9)
+    return X,y,X_train, X_test, y_train, y_test
+
+
+
+
+
+
