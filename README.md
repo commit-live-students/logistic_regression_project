@@ -4,13 +4,6 @@ Welcome! This is new project and new tasks at hand.
 
 **This is Logistic Regression Project**
 
-We are going to do task to strengthen whatever we learned in class of Logistic Regression. 
-
-## What we have learned so far:
-- Why Logistic Regression and What is Logistic Regression?
-- Hypertuning Parameter
-- Gradient Descent 
-- Evaluation metrics of Logistic Regression
 
 ## What we are going to do?
 * You have above data-set. You need to clean this data first.
@@ -41,9 +34,7 @@ This dataset contains following features:
 **Target Variable:**
 - Loan Status
 
-**Details information is mentioned in each task.**
 
-## By completing this task you will be earning 250 points in you training. So, GOOD LUCK!
 
 
 
